@@ -1,0 +1,24 @@
+{
+  "name": "sessao",
+  "version": "0.0.10",
+  "description": "Microsserviço que cria e gerencia Sessões",
+  "main": "sessao.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node sessao.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d4rkwav3/projetoA3.git"
+  },
+  "keywords": [
+    "projetoA3",
+    "sessão"
+  ],
+  "author": "Bruno Venâncio (d4rkwav3)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/d4rkwav3/projetoA3/issues"
+  },
+  "homepage": "https://github.com/d4rkwav3/projetoA3#readme"
+}

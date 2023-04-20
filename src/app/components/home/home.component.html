@@ -1,0 +1,40 @@
+<h2>Bem-vindo(a) {{ loguedUser.nome }} {{ loguedUser.sobrenome }}</h2>
+
+<h3 *ngIf="agendamentosPassados.length > 0 && loguedUser.tipo === 'psicologo'">Você possui {{ agendamentosPassados.length }} sessões com registro pendente.</h3>
+<h3 *ngIf="agendamentosPassados.length === 1 && loguedUser.tipo === 'psicologo'">Você possui {{ agendamentosPassados.length }} sessão com registro pendente.</h3>
+<!-- <h3 *ngIf="agendamentosPassados.length === 0 && loguedUser.tipo === 'psicologo'">Você não possui nenhuma pendência.</h3> -->
+
+<h3 *ngIf="agendamentosRecentes.length > 0">Próximas sessões:</h3>
+<h3 *ngIf="agendamentosRecentes.length === 0">Nenhuma sessão agendada.</h3>
+
+<mat-progress-spinner *ngIf="loading" value="50" mode="indeterminate"></mat-progress-spinner>
+
+<h3 *ngIf="!agendamentosRecentes">Você não possuí nenhuma sessão agendada no momento.</h3>
+
+<div *ngIf="agendamentosRecentes && loguedUser.tipo === 'paciente'">
+    <mat-card *ngFor="let ag of agendamentosRecentes">
+        <mat-card-header>
+            <mat-card-title>{{ ag.data_hora | date:'dd' }} de {{ ag.data_hora | date:'MMMM'}}</mat-card-title>
+            <mat-card-subtitle>{{ ag.data_hora | date:'HH:mm'}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                {{ ag.sala }}
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<div *ngIf="agendamentosRecentes && loguedUser.tipo === 'psicologo'">
+    <mat-card *ngFor="let ag of agendamentosRecentes">
+        <mat-card-header>
+            <mat-card-title>{{ ag.nome }} {{ ag.sobrenome }}</mat-card-title>
+            <mat-card-subtitle>{{ ag.data_hora | date:'dd' }} de {{ ag.data_hora | date:'MMMM'}} às {{ ag.data_hora | date:'HH:mm'}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                {{ ag.sala }}
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>

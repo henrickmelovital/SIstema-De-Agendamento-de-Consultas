@@ -1,0 +1,27 @@
+<h2 *ngIf="sessoes.length === 0">Você ainda não teve nenhuma sessão.</h2>
+
+<div id="paciente" *ngIf="sessoes.length > 0">
+    <mat-accordion>
+        <mat-expansion-panel hideToggle="false" *ngFor="let sessao of sessoes">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{ sessao.agendamento.data_hora | date:'dd'}} de
+                    {{ sessao.agendamento.data_hora | date:'MMMM'}} de
+                    {{ sessao.agendamento.data_hora | date:'yyyy'}}
+                </mat-panel-title>
+
+                <mat-panel-description *ngIf="user.tipo === 'psicologo'">
+                    {{ sessao.nome }} {{ sessao.sobrenome }}
+                </mat-panel-description>
+
+            </mat-expansion-panel-header>
+
+            <h4 *ngIf="user.tipo === 'psicologo'">Observações</h4>
+            <p *ngIf="user.tipo === 'psicologo'">{{ sessao.observacoes }}</p>
+
+            <h4>Notas</h4>
+            <p>{{ sessao.notas }}</p>
+
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

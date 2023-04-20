@@ -1,0 +1,48 @@
+<div id="novo">
+    <form (submit)="agendar(loginForm, user)" #loginForm="ngForm">
+        <mat-card id="agenda">
+            <mat-card-title>Agende uma sessão:</mat-card-title>
+            <mat-card-subtitle *ngIf="psico">Psicologo(a): {{ nomePsico }}</mat-card-subtitle>
+            <mat-form-field id="data">
+                <input matInput required [matDatepicker]="picker" placeholder="Escolha uma data" ngModel name="data"
+                    [min]="validador">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-hint>DD/MM/AAAA</mat-hint>
+            </mat-form-field>
+           <mat-form-field id="hora">
+             <input matInput required type="time" placeholder="Escolha uma horário" ngModel name="hora">
+             <mat-hint>hh:mm</mat-hint>
+            </mat-form-field>
+
+            <mat-card-actions>
+                <p id="local">Local:</p>
+                <mat-radio-group ngModel name="local">
+                    <mat-radio-button value="online">Online</mat-radio-button>
+                    <mat-radio-button value="presencial">Presencial</mat-radio-button>
+                </mat-radio-group>
+                <button mat-flat-button color="secundary">Agendar</button>
+            </mat-card-actions>
+        </mat-card>
+    </form>
+</div>
+
+<h3 *ngIf="appointments.length > 0" class="sessoes1">Sessões já agendadas:</h3>
+<h3 *ngIf="appointments.length === 0" class="sessoes1">Nenhuma sessão agendada.</h3>
+
+<div *ngIf="appointments" class="sessoes2">
+    <mat-card *ngFor="let ap of appointments">
+
+        <mat-card-title>{{ ap.data_hora | date:'dd' }} de {{ ap.data_hora | date:'MMMM'}} de {{ ap.data_hora |
+            date:'yyyy'}}</mat-card-title>
+        <mat-card-subtitle>
+
+            <p>Horário: {{ ap.data_hora | date:'HH:mm'}}</p>
+        </mat-card-subtitle>
+        <h3>Local:</h3>
+        <p>{{ ap.sala }}</p>
+        <mat-card-actions>
+            <button mat-flat-button color="warn" (click)="excluir(ap.id)">Cancelar</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

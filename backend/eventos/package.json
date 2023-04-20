@@ -1,0 +1,24 @@
+{
+  "name": "eventos",
+  "version": "0.0.10",
+  "description": "Microsserviço de que monitora eventos de outros serviços",
+  "main": "eventos.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node eventos.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d4rkwav3/projetoA3.git"
+  },
+  "keywords": [
+    "projetoA3",
+    "eventos"
+  ],
+  "author": "Bruno Venâncio (d4rkwav3)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/d4rkwav3/projetoA3/issues"
+  },
+  "homepage": "https://github.com/d4rkwav3/projetoA3#readme"
+}

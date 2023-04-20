@@ -1,0 +1,120 @@
+h1,
+h2,
+h3 {
+    text-align: center;
+    font-weight: bold;
+}
+div {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+}
+#novo {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 300px;
+}
+#agenda {
+    width: 400px;
+    height: 180px;
+}
+#hora {
+    display: inline-block;
+    margin-left: 1rem;
+}
+div > .mat-card {
+    text-align: center;
+    background-color: #3f51b5;
+    color: white;
+    height: 200px;
+    width: 300px;
+}   
+:host {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mat-card {
+    text-align: center;
+    margin-top: 1rem;
+    background-color: #3f51b5;
+    color: white;
+    height: 200px;
+    width: 280px;
+}
+.mat-card-subtitle {
+    text-align: center;
+    color: white;
+    font-size: medium;
+    font-style: italic;
+}
+.mat-card-title {
+    height: 35px;
+    text-align: center;
+}
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: white !important;
+}
+
+::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: white !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: white !important;
+}
+::ng-deep .mat-form-field-label {
+    /*muda a cor do placeholder*/
+    color: white !important;
+}
+mat-datepicker-toggle {
+    /*muda a cor do ícone do datepicker*/
+    color: white !important;
+}
+input {
+    caret-color: white;
+}
+#local {
+    display: inline-block;
+    margin-right: 1rem;
+}
+.mat-radio-button {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+::ng-deep .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+    background-color: white !important;
+}
+
+::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: white !important; /*inner circle color change*/
+}
+
+::ng-deep.mat-radio-button.mat-accent.mat-radio-checked
+    .mat-radio-outer-circle {
+    border-color: white !important; /*outer ring color change*/
+}
+.sessoes1 {
+    margin-top: -4rem;
+    padding-top: -1rem;
+    margin-bottom: 1rem;
+}
+.sessoes2 {
+    margin-top: -1.5rem;
+}
+.mat-hint {
+    color: white;
+}

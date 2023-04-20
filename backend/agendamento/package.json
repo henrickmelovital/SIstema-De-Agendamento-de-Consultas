@@ -1,0 +1,24 @@
+{
+  "name": "agendamento",
+  "version": "0.0.10",
+  "description": "Microsserviço que gerencia agendamento de sessões",
+  "main": "agendamento.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node agendamento.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d4rkwav3/projetoA3.git"
+  },
+  "keywords": [
+    "projetoA3",
+    "agendamento"
+  ],
+  "author": "Bruno Venâncio (d4rkwav3)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/d4rkwav3/projetoA3/issues"
+  },
+  "homepage": "https://github.com/d4rkwav3/projetoA3#readme"
+}

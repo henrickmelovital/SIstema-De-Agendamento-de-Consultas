@@ -1,0 +1,52 @@
+<h2 *ngIf="appointments.length === 0">Nenhuma sessão com registro pendente.</h2>
+<h2 *ngIf="appointments.length === 1">{{ appointments.length }} sessão com registro pendente.</h2>
+<h2 *ngIf="appointments.length > 1">{{ appointments.length }} sessões com registros pendentes.</h2>
+
+<div id="paciente">
+    <mat-accordion>
+        <mat-expansion-panel hideToggle="false" *ngFor="let ag of appointments; index as i">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{ ag.data_hora | date:'dd'}} de
+                    {{ ag.data_hora | date:'MMMM'}} de
+                    {{ ag.data_hora | date:'yyyy'}}
+                </mat-panel-title>
+
+                <mat-panel-description>
+                    {{ ag.nome }} {{ ag.sobrenome }}
+                </mat-panel-description>
+
+            </mat-expansion-panel-header>
+
+            <div *ngIf="!ag.arquivada">
+                <mat-form-field id="obs">
+                    <textarea matInput placeholder="Observações" [(ngModel)]="sessao[i].observacoes" name="obs"></textarea>
+                    <mat-hint>Essa observação é visivel apenas para você.</mat-hint>
+                </mat-form-field>
+
+                <mat-form-field id="notas">
+                    <textarea matInput placeholder="Notas" [(ngModel)]="sessao[i].notas" name="notas"></textarea>
+                    <mat-hint>Essa nota é visivel para o paciente.</mat-hint>
+                </mat-form-field>
+            </div>
+
+            <div *ngIf="ag.arquivada">
+                <mat-form-field id="select">
+                    <mat-label>Selecione o motivo do arquivamento</mat-label>
+                    <mat-select [(ngModel)]="ag.motivo" name="motivo">
+                        <mat-option value="Paciente não compareceu">Paciente não compareceu</mat-option>
+                        <mat-option value="A sessão foi cancelada">A sessão foi cancelada</mat-option>
+                        <mat-option value="A sessão foi remarcada">A sessão foi remarcada</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <mat-action-row>
+                <mat-checkbox [(ngModel)]="ag.arquivada" color="warn">Essa sessão não aconteceu</mat-checkbox>
+                <button mat-flat-button color="secondary" *ngIf="!ag.arquivada" (click)="registrar(ag)">Registrar
+                    Sessão</button>
+                <button mat-flat-button color="secondary" *ngIf="ag.arquivada" (click)="arquivar(ag)">Arquivar</button>
+            </mat-action-row>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

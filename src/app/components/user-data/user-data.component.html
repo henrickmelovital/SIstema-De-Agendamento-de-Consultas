@@ -1,0 +1,62 @@
+<h2>Seus Dados</h2>
+<mat-card>
+    <mat-form-field id="nome">
+        <input matInput type="text" name="nome" placeholder="Nome" disabled [(ngModel)]="user.nome">
+    </mat-form-field>
+
+    <mat-form-field id="sobrenome">
+        <input matInput type="text" name="sobrenome" placeholder="Sobrenome" disabled [(ngModel)]="user.sobrenome">
+    </mat-form-field>
+
+    <mat-form-field id="email">
+        <input matInput required minlength="10" maxlength="200" type="email" placeholder="E-mail" [(ngModel)]="user.email">
+    </mat-form-field>
+
+    <mat-form-field id="telefone">
+        <input matInput type="tel" minlength="11" maxlength="11" placeholder="Telefone" [(ngModel)]="user.telefone">
+    </mat-form-field>
+
+    <mat-form-field id="dataNascimento">
+        <input matInput disabled [matDatepicker]="picker" placeholder="Data de Nascimento" [(ngModel)]="user.dataNascimento">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <!--<p id="idade">{{ idade }} anos</p>-->
+
+    <mat-form-field id="endereço">
+        <input matInput type="text" placeholder="Endereço" [(ngModel)]="user.endereco">
+    </mat-form-field>
+    
+    <mat-form-field id="cidade">
+        <input matInput type="text" placeholder="Cidade" [(ngModel)]="user.cidade">
+    </mat-form-field>
+
+    <mat-form-field id="cep">
+        <input matInput type="text" placeholder="CEP" [(ngModel)]="user.cep">
+    </mat-form-field>
+
+    <mat-form-field id="cpf" *ngIf="userData">
+        <input matInput type="text" placeholder="CPF" disabled [(ngModel)]="userData.cpf">
+    </mat-form-field>
+
+    <mat-form-field id="responsavel" *ngIf="userData">
+        <input matInput type="text" placeholder="Responsável" [(ngModel)]="userData.responsavel">
+    </mat-form-field>
+
+    <mat-form-field id="cpf" *ngIf="psicoData">
+        <input matInput type="text" placeholder="CPF" disabled [(ngModel)]="psicoData.cpf">
+    </mat-form-field>
+
+    <mat-form-field id="titulacao" *ngIf="psicoData">
+        <input matInput type="text" placeholder="Titulação" required minlength="11" [(ngModel)]="psicoData.titulacao">
+    </mat-form-field>
+
+    <mat-form-field id="especialidade" *ngIf="psicoData">
+        <input matInput type="text" placeholder="Especialidade"  minlength="11" [(ngModel)]="psicoData.especialidade">
+    </mat-form-field>
+
+    <mat-card-actions>
+        <button class="acoes" mat-button routerLink="/home">Voltar</button>
+        <button class="acoes" mat-button (click)="salvar()">Salvar</button>
+    </mat-card-actions>
+</mat-card>

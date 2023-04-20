@@ -1,0 +1,38 @@
+mat-toolbar {
+    height: 4.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+mat-toolbar > h3 {
+    text-align: left;
+}
+ul {
+    text-align: center;
+}
+.navbar > button {
+    margin-left: 1rem;
+}
+
+.navbar > app-navbar {
+    width: 75%;
+    margin-top: 1rem;
+}
+.mat-card {
+    text-align: center;
+    background-color: #3f51b5;
+    color: white;
+}
+a {
+    margin-top: 1rem;
+}
+p {
+    margin-top: 2rem;
+}
+#cadastro {
+    text-align: center;
+    margin-top: 2rem;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}

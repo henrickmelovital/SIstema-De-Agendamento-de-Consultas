@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+    <h3>Clinica Psicológica Wilhelm Wundt</h3>
+
+    <div class="navbar">
+        <app-login (login)="onLogIn()" [hidden]="hide"></app-login> 
+        <app-nav-bar (logout)="onLogOut()" [hidden]="!hide" [user]="user"></app-nav-bar>
+    </div>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

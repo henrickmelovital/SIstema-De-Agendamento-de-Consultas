@@ -1,0 +1,161 @@
+h1,
+h2,
+h3 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.mat-card {
+    justify-content: center;
+    width: 540px;
+    height: 415px;
+    background-color: #3f51b5;
+    color: white;
+}
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: white !important;
+}
+
+::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: white !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: white !important;
+}
+::ng-deep .mat-form-field-label {
+    /*muda a cor do placeholder*/
+    color: white !important;
+}
+mat-datepicker-toggle {
+    /*muda a cor do ícone do datepicker*/
+    color: white !important;
+}
+input {
+    caret-color: white;
+}
+.mat-form-field {
+    width: 540px;
+}
+#login {
+    display: inline-block;
+    width: 265px;
+    margin-top: 2px;
+}
+#senha {
+    display: inline-block;
+    margin-left: 10px;
+    width: 265px;
+}
+#nome {
+    display: inline-block;
+    width: 190px;
+    margin-top: 5px;
+}
+#sobrenome {
+    margin-left: 10px;
+    display: inline-block;
+    width: 340px;
+}
+#dataNascimento {
+    margin-left: 10px;
+    display: inline-block;
+    width: 165px;
+    
+}
+#telefone {
+    display: inline-block;
+    width: 100px;
+}
+#email {
+    display: inline-block;
+    width: 255px;
+    margin-right: 10px;
+}
+#endereço {
+    display: inline-block;
+    width: 255px;
+    margin-top: 7px;
+
+}
+#cidade {
+    display: inline-block;
+    width: 165px;
+    margin-left: 10px;
+}
+#cep {
+    display: inline-block;
+    width: 100px;
+    margin-left: 10px;
+}
+#cpf {
+    display: inline-block;
+    width: 140px;
+    margin-top: 5px;
+}
+#responsavel {
+    margin-left: 10px;
+    display: inline-block;
+    width: 390px;
+    margin-top: 5px;
+}
+#titulacao {
+    margin-left: 10px;
+    display: inline-block;
+    width: 180px;
+}
+#especialidade {
+    margin-left: 10px;
+    display: inline-block;
+    width: 200px;
+}
+.acoes {
+    display: flex;
+    align-items: flex-end;
+}
+.mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+::ng-deep .mat-form-field-type-mat-native-select .mat-form-field-disabled .mat-form-field-infix::after, .mat-input-element:disabled {
+    color: white !important;
+}
+::ng-deep .mat-select-arrow {
+    color: white;
+}
+::ng-deep .mat-select-value{
+    color: white !important;
+}
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#psico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 2rem;
+    width: 350px;
+}
+.psicoInfo {
+    margin-bottom: -1rem;
+}
+h5 {
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+}
+.mat-hint {
+    color: white;
+}
+#select {
+    margin-top: 1rem;
+}
+p {
+    margin-top: 0.5rem;
+}

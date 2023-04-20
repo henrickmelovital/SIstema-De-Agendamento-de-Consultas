@@ -1,0 +1,40 @@
+h1, h2, h3 {
+    text-align: center;
+    margin-top: 1rem;
+}
+div {
+    margin-top: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 400px;
+}
+:host {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mat-card {
+    background-color: #3f51b5;
+    color: white;
+    height: 170px;
+    width: 150px;
+}
+.mat-card-subtitle {
+    color: white;
+    padding-top: 1rem;
+    font-size: medium;
+    font-style: italic;
+}
+.mat-card-title {
+    height: 35px;
+    text-align: center;
+}
+.mat-progress-spinner {
+    margin-left: auto;
+    margin-right: auto;
+}

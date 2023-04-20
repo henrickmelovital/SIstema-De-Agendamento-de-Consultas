@@ -1,0 +1,95 @@
+#paciente {
+    margin-top: 1rem;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h2, h4 {
+    font-weight: bold;
+}
+.mat-expansion-panel {
+    color: white;
+    background-color: #3f51b5;
+}
+.mat-expansion-panel-header-title {
+    color: white;
+    font-weight: bold;
+}
+::ng-deep .mat-expansion-indicator::after,
+.mat-expansion-panel-header-description {
+    color: white;
+}
+h2 {
+    margin-top: 1rem;
+    text-align: center;
+}
+button {
+    margin-right: 1rem;
+}
+.mat-action-row {
+    display: flex;
+    justify-content: space-between;
+}
+.mat-checkbox {
+    margin-top: 7px;
+}
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: white !important;
+}
+::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: white !important;
+}
+::ng-deep.mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: white !important;
+}
+::ng-deep .mat-form-field-label {
+    /*muda a cor do placeholder*/
+    color: white !important;
+}
+mat-datepicker-toggle {
+    /*muda a cor do ícone do datepicker*/
+    color: white !important;
+}
+input {
+    caret-color: white;
+}
+#obs, #notas {
+    width: 650px;
+}
+.mat-hint {
+    color: white;
+}
+::ng-deep .mat-checkbox-inner-container {
+    bottom: 2px !important; /* ajusta a altura do texto do checkbox*/
+}
+::ng-deep .mat-form-field-type-mat-native-select .mat-form-field-disabled .mat-form-field-infix::after, .mat-input-element:disabled {
+    color: white !important;
+}
+::ng-deep .mat-select-arrow {
+    color: white;
+}
+::ng-deep .mat-select-value{
+    color: white !important;
+}
+#select {
+    width: 650px;
+}
+::ng-deep .mat-checkbox .mat-checkbox-frame {
+    border-color: white; /* Muda a cor da borda do checkbox*/
+}
+
+::ng-deep .mat-checkbox-checked .mat-checkbox-background {
+    background-color: white !important; /* Muda a cor do checkbox selecionado */
+}
+
+::ng-deep .mat-checkbox-indeterminate .mat-checkbox-background {
+    border-color: #ff6f00 !important; /* Muda a cor do checkbox com seleção alternada */
+    background-color: #ff6f00 !important;
+}
+
+::ng-deep mat-checkbox .mat-checkbox-checkmark-path {
+    stroke: #3f51b5 !important; /* Muda a cor do checkmark*/
+}

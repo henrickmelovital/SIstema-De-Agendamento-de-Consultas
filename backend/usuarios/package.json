@@ -1,0 +1,28 @@
+{
+  "name": "usuarios",
+  "version": "0.0.10",
+  "description": "Microsserviço gerencia o login e dados dos usuários",
+  "main": "usuarios.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node usuarios.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d4rkwav3/projetoA3.git"
+  },
+  "keywords": [
+    "projetoA3",
+    "usuários"
+  ],
+  "author": "Bruno Venâncio (d4rkwav3)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/d4rkwav3/projetoA3/issues"
+  },
+  "homepage": "https://github.com/d4rkwav3/projetoA3#readme",
+  "dependencies": {
+    "axios": "^1.1.3",
+    "express": "^4.18.2"
+  }
+}

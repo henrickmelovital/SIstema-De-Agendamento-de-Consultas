@@ -1,0 +1,114 @@
+h1,
+h2,
+h3 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.mat-card {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #3f51b5;
+    color: white;
+}
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: white !important;
+}
+
+::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: white !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: white !important;
+}
+::ng-deep .mat-form-field-label {
+    /*muda a cor do placeholder*/
+    color: white !important;
+}
+mat-datepicker-toggle {
+    /*muda a cor do ícone do datepicker*/
+    color: white !important;
+}
+input {
+    caret-color: white;
+}
+.mat-form-field {
+    width: 500px;
+}
+#nome {
+    display: inline-block;
+    width: 150px;
+}
+#sobrenome {
+    margin-left: 10px;
+    display: inline-block;
+    width: 340px;
+}
+#dataNascimento {
+    margin-left: 10px;
+    display: inline-block;
+    width: 125px;
+}
+#idade {
+    display: inline-block;
+    width: 50px;
+    margin-left: 10px;
+}
+#telefone {
+    display: inline-block;
+    width: 100px;
+}
+#email {
+    display: inline-block;
+    width: 255px;
+    margin-right: 10px;
+}
+#endereço {
+    display: inline-block;
+    width: 255px;
+}
+#cidade {
+    display: inline-block;
+    width: 145px;
+    margin-left: 10px;
+}
+#cep {
+    display: inline-block;
+    width: 80px;
+    margin-left: 10px;
+}
+#cpf {
+    display: inline-block;
+    width: 100px;
+}
+#responsavel {
+    margin-left: 10px;
+    display: inline-block;
+    width: 390px;
+}
+#titulacao {
+    margin-left: 10px;
+    display: inline-block;
+    width: 180px;
+}
+#especialidade {
+    margin-left: 10px;
+    display: inline-block;
+    width: 200px;
+}
+.acoes {
+    display: flex;
+    align-items: flex-end;
+}
+.mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+::ng-deep .mat-form-field-type-mat-native-select .mat-form-field-disabled .mat-form-field-infix::after, .mat-input-element:disabled {
+    color: #888888 !important;
+}
