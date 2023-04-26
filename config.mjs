@@ -7,8 +7,8 @@ export const config = {
     },
     database: {
         host: "localhost",
-        user: "d4rkwav3",
-        password: "5481",
+        user: "root",
+        password: "123456",
         database: "projetoA3"
     }
 };
